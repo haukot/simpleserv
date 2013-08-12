@@ -36,10 +36,10 @@ init([]) ->
     Shutdown = 2000,     % brutal_kill | int() >= 0 | infinity
     Type = worker,       % worker | supervisor
 
-    AChild = {'AName', % used to identify the child spec internally by the supervisor
-	      {'AModule', start_link, []}, % StartFun = {M, F, A}
+    Child = {'my_serv', % used to identify the child spec internally by the supervisor
+	      {'my_serv', start_link, []}, % StartFun = {M, F, A}
 	      Restart, Shutdown, Type, 
-	      ['AModule']}, % Modules  = [Module] | dynamic
+	      ['my_serv']}, % Modules  = [Module] | dynamic
 
-    {ok, {SupFlags, []}}.
+    {ok, {SupFlags, [Child]}}.
 
