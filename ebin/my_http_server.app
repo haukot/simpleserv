@@ -1,9 +1,0 @@
-{application,my_http_server,
-             [{description,[]},
-              {vsn,"1"},
-              {registered,[]},
-              {applications,[kernel,stdlib]},
-              {mod,{my_http_server_app,[]}},
-              {env,[]},
-              {modules,[my_http_server,my_http_server_app,my_http_server_sup,
-                        my_serv]}]}.
