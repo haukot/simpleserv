@@ -41,5 +41,5 @@ init([]) ->
 	      Restart, Shutdown, Type, 
 	      ['AModule']}, % Modules  = [Module] | dynamic
 
-    {ok, {SupFlags, [AChild]}}.
+    {ok, {SupFlags, []}}.
 
